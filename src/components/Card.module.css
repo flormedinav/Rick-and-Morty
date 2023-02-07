@@ -1,0 +1,71 @@
+.divCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0c7d85;
+  border: #c5e077 3px solid;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.39);
+}
+
+/* .divCard:hover {
+  transform: scale(1.03);
+} */
+
+.image {
+  overflow-y: visible;
+  order: -1;
+  width: 94%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.39); */
+  /* height: 90%; */
+}
+
+.btn {
+  order: -1;
+  background-color: #4a8c86;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 2%;
+  margin: 2%;
+}
+
+.btn:hover {
+  background-color: #043f47;
+}
+
+.name {
+  text-align: center;
+  /* background-color: #344f50; */
+  margin: 0px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: white;
+  font-size: 25px;
+  background-color: #407772;
+  width: 94%;
+}
+
+.divSpeciesGender {
+  background-color: #4a8c86;
+  width: 94%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.species {
+  font-weight: normal;
+  color: white;
+  font-size: 20px;
+}
+
+.gender {
+  font-weight: normal;
+  color: white;
+  font-size: 20px;
+}
