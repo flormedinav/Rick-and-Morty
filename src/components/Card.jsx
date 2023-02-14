@@ -1,5 +1,5 @@
 import { useState } from "react";
-import characters from "../data";
+// import characters from "../data";
 import styles from "./Card.module.css";
 
 export default function Card({ name, species, gender, image, onClose }) {

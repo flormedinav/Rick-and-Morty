@@ -2,7 +2,7 @@ import Card from "./Card";
 import styles from "./Cards.module.css";
 
 export default function Cards(props) {
-  const { characters } = props;
+  const { characters, onClose } = props;
   return (
     <div className={styles.divCards}>
       {characters ? (
@@ -13,7 +13,7 @@ export default function Cards(props) {
             species={character.species}
             gender={character.gender}
             image={character.image}
-            onClose={() => window.alert("Emulamos que se cierra la card")}
+            onClose={() => onClose(character.id)}
           />
         ))
       ) : (
