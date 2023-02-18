@@ -1,0 +1,74 @@
+.divDetail {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+.masDetail {
+  display: flex;
+  justify-content: space-around;
+}
+
+.h2Detail {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: white;
+
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.h3Detail {
+  font-size: 2.5rem;
+  color: #81c925;
+  letter-spacing: 0.1rem;
+}
+
+.pDetail {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.pDetail span {
+  color: #81c925;
+}
+
+.imageDetail {
+  margin-top: 30px;
+  width: 500px;
+  border-radius: 999999999999em;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.39);
+}
+
+.btnDetail {
+  background-color: #5aa64e;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  letter-spacing: 0.05rem;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.39);
+  margin-left: 18px;
+}
+
+.btnDetail:hover {
+  background-color: #264a21;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

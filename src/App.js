@@ -1,19 +1,38 @@
-import "./App.css";
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav";
-import { useState } from "react";
-import SearchBar from "./components/SearchBar";
-import styles from "../src/components/Cards.module.css";
+import style from "./App.module.css";
+import Cards from "./components/Cards/Cards";
+import Nav from "./components/Nav/Nav";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
+import Error404 from "./components/Error404/Error404";
+import Form from "./components/Form/Form";
+import Favorites from "./components/Favorites/Favorites";
+import { useState, useEffect } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteFavorite } from "./redux/actions";
+
+// import SearchBar from "./components/Nav/SearchBar";
+// import styles from "../src/components/Cards/Cards.module.css";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(false);
+  const username = "flormedinav7@gmail.com";
+  const password = "123asd";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
 
-  // const example = {
-  //   name: "Morty Smith",
-  //   species: "Human",
-  //   gender: "Male",
-  //   image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-  // };
+  function login(userData) {
+    if (userData.password === password && userData.username === username) {
+      setAccess(true);
+      navigate("/home");
+    }
+  }
+
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
 
   function onSearch(searchCharacter) {
     console.log(searchCharacter);
@@ -56,16 +75,26 @@ function App() {
 
   function onClose(id) {
     setCharacters(characters.filter((personaje) => personaje.id !== id));
+    dispatch(deleteFavorite(id));
   }
 
   return (
-    <div className="App" style={{ padding: "25px" }}>
-      <div>
+    <div className={style.divApp}>
+      {location.pathname === "/" ? (
+        <Form login={login} />
+      ) : (
         <Nav onSearch={onSearch} onRamdon={onRamdon} />
-      </div>
-      <div>
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+      )}
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="detail/:detailId" element={<Detail />} />
+        {location.pathname !== "/" && <Route path="*" element={<Error404 />} />}
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
     </div>
   );
 }

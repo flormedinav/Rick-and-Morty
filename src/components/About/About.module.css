@@ -1,0 +1,59 @@
+.divAbout {
+  /* background-color: rgb(23, 102, 102); */
+  height: 700px;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h2About {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.h3About {
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.h3About span {
+  color: #81c925;
+}
+
+.parafoAbout {
+  color: white;
+}
+
+.parafoAbout span {
+  color: #81c925;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imageAbout {
+  width: 500px;
+  height: 600px;
+  background-image: url(../../image/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

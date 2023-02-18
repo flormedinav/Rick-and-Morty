@@ -1,0 +1,8 @@
+.divApp {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 800px;
+  width: 1400px;
+  /* margin-top: 2em; */
+}
