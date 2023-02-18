@@ -17,7 +17,7 @@ export default function (props) {
       <nav className={style.container}>
         <div className={style.navegacion}>
           {/* Aquí estoy generando botones para que me lleven a about y home */}
-          <Link to="/" className={style.linkNav}>
+          <Link to="/" className={style.linkNav1}>
             Logout
           </Link>
 
