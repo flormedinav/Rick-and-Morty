@@ -13,9 +13,10 @@
 }
 
 .logNav {
+  margin-top: 20px;
   width: 500px;
   height: 120px;
-  background-image: url(../../image/logochiquito.png);
+  background-image: url(../../image/logochico.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
