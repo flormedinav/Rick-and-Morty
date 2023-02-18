@@ -1,5 +1,4 @@
 .divCard {
-  margin-top: 30px;
   display: inline-block;
   box-sizing: border-box;
   margin-right: 44px;
@@ -71,4 +70,24 @@
   font-weight: normal;
   color: white;
   font-size: 18px;
+}
+
+.divSelect {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.selectFav {
+  margin-left: 20px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #5aa64e;
+  letter-spacing: 0.05rem;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
 }

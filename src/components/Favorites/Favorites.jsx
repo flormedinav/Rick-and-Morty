@@ -17,15 +17,15 @@ const Favorites = () => {
 
   return (
     <div>
-      <div>
-        <select onChange={handleOrderCards}>
+      <div className={styles.divSelect}>
+        <select onChange={handleOrderCards} className={styles.selectFav}>
           <option value="order" disabled="disabled">
             Order By
           </option>
           <option value="Ascendente">Ascendente</option>
           <option value="Descentente">Descentente</option>
         </select>
-        <select onChange={handleFilterCards}>
+        <select onChange={handleFilterCards} className={styles.selectFav}>
           <option value="filter" disabled="disabled">
             Filter By
           </option>
