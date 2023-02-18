@@ -38,7 +38,7 @@ const Detail = () => {
           </p>
           <p className={style.pDetail}>
             <span>Specie: </span>
-            {character?.specie}
+            {character?.species}
           </p>
           <p className={style.pDetail}>
             <span>Gender: </span>
