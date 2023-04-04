@@ -35,8 +35,7 @@ function App() {
   }, [access]);
 
   function onSearch(searchCharacter) {
-    console.log(searchCharacter);
-    fetch(`https://rickandmortyapi.com/api/character/${searchCharacter}`)
+    fetch(`http://localhost:3001/rickandmorty/character/${searchCharacter}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
