@@ -1,8 +1,8 @@
-# **DOGS** | Proyecto Individual
+# **RICK AND MORTY** | Proyecto integrador
 
 ## **📌 OBJETIVOS**
 
-- Construir una Single Page Application de Rick and Morty 🐶.
+- Construir una Single Page Application de Rick and Morty 👽.
 
 ## **📌 DESCRIPCIÓN DEL PROYECTO**
 
